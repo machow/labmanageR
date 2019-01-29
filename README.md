@@ -72,7 +72,12 @@ Alternatively, you can pass the webhook directly to `osf_report_modified_slack`.
 
 ```R
 # replace <MORE_HERE> with your webhook url
-osf_report_modified_slack("aswnc", after_date = "2019-01-01", type = "user", "https://hooks.slack.com/services/<MORE_HERE>")
+osf_report_modified_slack(
+  "aswnc",
+  after_date = "2019-01-01",
+  type = "user",
+  incoming_webhooks_url = "https://hooks.slack.com/services/<MORE_HERE>"
+)
 ```
 
 
