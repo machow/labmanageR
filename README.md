@@ -44,8 +44,37 @@ See
 
 
 ```R
-osf_report_modified_slack("aswnc", after_date = "2016-01-01", type = "user")
+osf_report_modified_slack("aswnc", after_date = "2019-01-01", type = "user")
 ```
+
+### Getting your slack webhook
+
+First, go to https://api.slack.com/apps, and click "Create New App" (shown below).
+
+<img src="man/figures/slack1.png" width="50%">
+
+Next, enter the name of your bot, and the slack workspace it will belong to.
+
+<img src="man/figures/slack2.png" width="50%">
+
+Finally, in the "Add Features and Functionality" section of the main page should be a "Incoming Webhooks" option.
+Click it, and toggle the botton from off to on. Then, scroll down to the bottom of the page and click "Add New Webhook to Workspace". (Shown below).
+
+<img src="man/figures/slack3.png" width="50%">
+
+You should now be able to copy your webhook link. Put it into a file named `~/.slackrc`.
+
+```
+incoming_webhook_url: https://hooks.slack.com/services/<MORE_HERE>
+```
+
+Alternatively, you can pass the webhook directly to `osf_report_modified_slack`...
+
+```R
+# replace <MORE_HERE> with your webhook url
+osf_report_modified_slack("aswnc", after_date = "2019-01-01", type = "user", "https://hooks.slack.com/services/<MORE_HERE>")
+```
+
 
 
 
