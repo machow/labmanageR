@@ -1,13 +1,15 @@
 Package: labmanageR
-Title: What the Package Does (One Line, Title Case)
+Title: Goes those fresh Open Science Framework updates in slack.
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Michael",
+           family = "Chow",
            role = c("aut", "cre"),
-           email = "first.last@example.com")
-Description: What the package does (one paragraph).
-License: What license it uses
+           email = "mc_al_github@fastmail.com")
+Description: This package allows you to check either your OSF user account, or a project
+    for changes. Then, by the magic of the slack API, it lets you post them to inspire your
+    lab to move the wheels of science.
+License: MIT
 Encoding: UTF-8
 LazyData: true
 Imports: 
